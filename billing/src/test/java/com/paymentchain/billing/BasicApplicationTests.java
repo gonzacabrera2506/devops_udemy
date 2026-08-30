@@ -145,7 +145,7 @@ public class BasicApplicationTests extends AbstractIntegrationTest {
 
         when(invoiceRepository.findById(defaultId)).thenReturn(Optional.of(dto));
 
-        // Act & Assert
+        // Act &  Assert
         mockMvc.perform(MockMvcRequestBuilders.delete("/billing/v1/{id}", defaultId)
                 .contentType("application/json"))
                 .andExpect(MockMvcResultMatchers.status().isOk());
